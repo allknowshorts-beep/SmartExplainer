@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartExplainer</title>
+</head>
+<body>
+
+<h1>SmartExplainer AI 🎥</h1>
+
+<input id="topic" placeholder="Enter topic">
+<button onclick="generate()">Generate</button>
+
+<script>
+async function generate() {
+  let topic = document.getElementById("topic").value;
+
+  await fetch("https://YOUR-RENDER-URL/generate", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({topic})
+  });
+
+  alert("Video Created!");
+}
+</script>
+
+</body>
+</html>
