@@ -14,7 +14,7 @@
 async function generate() {
   let topic = document.getElementById("topic").value;
 
-  await fetch("https://YOUR-RENDER-URL/generate", {
+  await fetch("https://smartexplainer.onrender.com", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify({topic})
